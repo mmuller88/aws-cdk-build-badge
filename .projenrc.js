@@ -11,6 +11,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/core',
+    '@aws-cdk/aws-lambda-nodejs',
   ],
   keywords: [
     'cdk',
@@ -23,5 +24,12 @@ const project = new AwsCdkConstructLibrary({
     module: 'aws_cdk_build_badge',
   },
 });
+
+project.setScript('deploy', 'cdk deploy');
+project.setScript('destroy', 'cdk destroy');
+
+const common_exclude = ['cdk.out'];
+project.npmignore.exclude(...common_exclude);
+project.gitignore.exclude(...common_exclude);
 
 project.synth();

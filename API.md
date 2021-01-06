@@ -37,6 +37,14 @@ new BuildBadge(parent: Stack, id: string, props: BuildBadgeProps)
 
 
 
+### Properties
+
+
+Name | Type | Description 
+-----|------|-------------
+**badgeUrl** | <code>string</code> | <span></span>
+
+
 
 ## struct BuildBadgeProps  <a id="aws-cdk-build-badge-buildbadgeprops"></a>
 

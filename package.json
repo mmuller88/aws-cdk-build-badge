@@ -7,6 +7,8 @@
   "scripts": {
     "projen": "npx projen",
     "start": "npx projen start",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "test:compile": "npx projen test:compile",

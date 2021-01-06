@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { BuildBadge } from './index';
+import { BuildBadge } from '../src/index';
 
 export class IntegTesting {
   readonly stack: cdk.Stack[];

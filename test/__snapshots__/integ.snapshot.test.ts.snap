@@ -3,6 +3,32 @@
 exports[`integ snapshot validation 1`] = `
 Object {
   "Outputs": Object {
+    "BuildBadgeBadgeUrlB81442AA": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "https://",
+            Object {
+              "Ref": "BuildBadgeLambdaRestApi67D65870",
+            },
+            ".execute-api.",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            Object {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            Object {
+              "Ref": "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
     "BuildBadgeLambdaRestApiEndpoint63A20E45": Object {
       "Value": Object {
         "Fn::Join": Array [
@@ -31,16 +57,16 @@ Object {
     },
   },
   "Parameters": Object {
-    "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95ArtifactHash38FB282C": Object {
-      "Description": "Artifact hash for asset \\"7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95\\"",
+    "AssetParameters891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588ArtifactHash9F27F738": Object {
+      "Description": "Artifact hash for asset \\"891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588\\"",
       "Type": "String",
     },
-    "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3BucketCD000C68": Object {
-      "Description": "S3 bucket for asset \\"7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95\\"",
+    "AssetParameters891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588S3BucketF7288760": Object {
+      "Description": "S3 bucket for asset \\"891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588\\"",
       "Type": "String",
     },
-    "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3VersionKey0C42B932": Object {
-      "Description": "S3 key for asset version \\"7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95\\"",
+    "AssetParameters891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588S3VersionKeyCA939230": Object {
+      "Description": "S3 key for asset version \\"891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588\\"",
       "Type": "String",
     },
   },
@@ -56,7 +82,7 @@ Object {
         "Action": "lambda:InvokeFunction",
         "FunctionName": Object {
           "Fn::GetAtt": Array [
-            "BuildBadgebadgeLambda93450534",
+            "BuildBadgebadgeA0B40829",
             "Arn",
           ],
         },
@@ -93,7 +119,7 @@ Object {
         "Action": "lambda:InvokeFunction",
         "FunctionName": Object {
           "Fn::GetAtt": Array [
-            "BuildBadgebadgeLambda93450534",
+            "BuildBadgebadgeA0B40829",
             "Arn",
           ],
         },
@@ -151,7 +177,7 @@ Object {
                 ":lambda:path/2015-03-31/functions/",
                 Object {
                   "Fn::GetAtt": Array [
-                    "BuildBadgebadgeLambda93450534",
+                    "BuildBadgebadgeA0B40829",
                     "Arn",
                   ],
                 },
@@ -217,7 +243,7 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "BuildBadgeLambdaRestApiDeployment08CF77EE08a3197784e226bf490b78ac6d0277ed": Object {
+    "BuildBadgeLambdaRestApiDeployment08CF77EE87f9df7e610dc9aef2c928e3131ccfb6": Object {
       "DependsOn": Array [
         "BuildBadgeLambdaRestApiproxyANY2FB04D37",
         "BuildBadgeLambdaRestApiproxyAA6A28B8",
@@ -234,7 +260,7 @@ Object {
     "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC": Object {
       "Properties": Object {
         "DeploymentId": Object {
-          "Ref": "BuildBadgeLambdaRestApiDeployment08CF77EE08a3197784e226bf490b78ac6d0277ed",
+          "Ref": "BuildBadgeLambdaRestApiDeployment08CF77EE87f9df7e610dc9aef2c928e3131ccfb6",
         },
         "RestApiId": Object {
           "Ref": "BuildBadgeLambdaRestApi67D65870",
@@ -280,7 +306,7 @@ Object {
                 ":lambda:path/2015-03-31/functions/",
                 Object {
                   "Fn::GetAtt": Array [
-                    "BuildBadgebadgeLambda93450534",
+                    "BuildBadgebadgeA0B40829",
                     "Arn",
                   ],
                 },
@@ -303,7 +329,7 @@ Object {
         "Action": "lambda:InvokeFunction",
         "FunctionName": Object {
           "Fn::GetAtt": Array [
-            "BuildBadgebadgeLambda93450534",
+            "BuildBadgebadgeA0B40829",
             "Arn",
           ],
         },
@@ -340,7 +366,7 @@ Object {
         "Action": "lambda:InvokeFunction",
         "FunctionName": Object {
           "Fn::GetAtt": Array [
-            "BuildBadgebadgeLambda93450534",
+            "BuildBadgebadgeA0B40829",
             "Arn",
           ],
         },
@@ -376,15 +402,14 @@ Object {
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "BuildBadgebadgeLambda93450534": Object {
+    "BuildBadgebadgeA0B40829": Object {
       "DependsOn": Array [
-        "BuildBadgebadgeLambdaServiceRoleDefaultPolicy337DE56F",
-        "BuildBadgebadgeLambdaServiceRole741B9F3C",
+        "BuildBadgebadgeServiceRoleE417F11F",
       ],
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3BucketCD000C68",
+            "Ref": "AssetParameters891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588S3BucketF7288760",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -397,7 +422,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3VersionKey0C42B932",
+                          "Ref": "AssetParameters891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588S3VersionKeyCA939230",
                         },
                       ],
                     },
@@ -410,7 +435,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3VersionKey0C42B932",
+                          "Ref": "AssetParameters891e2521bc379f39619badc10d16d8692c85a5b8f289f71ead5f44e9c0e2d588S3VersionKeyCA939230",
                         },
                       ],
                     },
@@ -420,21 +445,24 @@ Object {
             ],
           },
         },
-        "Handler": "badge.handler",
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+          },
+        },
+        "Handler": "index.handler",
         "Role": Object {
           "Fn::GetAtt": Array [
-            "BuildBadgebadgeLambdaServiceRole741B9F3C",
+            "BuildBadgebadgeServiceRoleE417F11F",
             "Arn",
           ],
         },
         "Runtime": "nodejs12.x",
-        "TracingConfig": Object {
-          "Mode": "Active",
-        },
+        "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "BuildBadgebadgeLambdaServiceRole741B9F3C": Object {
+    "BuildBadgebadgeServiceRoleE417F11F": Object {
       "Properties": Object {
         "AssumeRolePolicyDocument": Object {
           "Statement": Array [
@@ -464,30 +492,6 @@ Object {
         ],
       },
       "Type": "AWS::IAM::Role",
-    },
-    "BuildBadgebadgeLambdaServiceRoleDefaultPolicy337DE56F": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": Array [
-                "xray:PutTraceSegments",
-                "xray:PutTelemetryRecords",
-              ],
-              "Effect": "Allow",
-              "Resource": "*",
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "PolicyName": "BuildBadgebadgeLambdaServiceRoleDefaultPolicy337DE56F",
-        "Roles": Array [
-          Object {
-            "Ref": "BuildBadgebadgeLambdaServiceRole741B9F3C",
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Policy",
     },
   },
 }

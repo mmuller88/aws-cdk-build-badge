@@ -20,3 +20,4 @@ dist
 /tsconfig.jest.json
 /.eslintrc.json
 !.jsii
+cdk.out
