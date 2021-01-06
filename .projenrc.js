@@ -1,5 +1,10 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
+const deps = [
+  'aws-lambda',
+  'aws-sdk',
+];
+
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'damadden88@googlemail.de',
   authorName: 'martin.mueller',
@@ -7,12 +12,20 @@ const project = new AwsCdkConstructLibrary({
   cdkVersionPinning: true,
   name: 'aws-cdk-build-badge',
   repositoryUrl: 'https://github.com/mmuller88/aws-cdk-build-badge',
+  codeCov: true,
+  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   cdkDependencies: [
     '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/core',
     '@aws-cdk/aws-lambda-nodejs',
   ],
+  devDeps: [
+    '@types/aws-lambda',
+    'esbuild@^0',
+  ],
+  deps: deps,
+  bundledDeps: deps,
   keywords: [
     'cdk',
     'aws',

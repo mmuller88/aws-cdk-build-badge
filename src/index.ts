@@ -17,6 +17,7 @@ export class BuildBadge extends core.Construct {
 
     const badgeLambda = new lambdajs.NodejsFunction(this, 'badge', {
       timeout: core.Duration.minutes(15),
+      // handler: 'get',
       // tracing: lambda.Tracing.ACTIVE,
     });
 

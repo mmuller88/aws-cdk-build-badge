@@ -32,10 +32,12 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.80.0",
+    "@types/aws-lambda": "^8.10.70",
     "@types/jest": "^26.0.19",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
+    "esbuild": "^0",
     "eslint": "^7.17.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.3.0",
@@ -64,9 +66,14 @@
     "@aws-cdk/aws-apigateway": "1.80.0",
     "@aws-cdk/aws-lambda": "1.80.0",
     "@aws-cdk/aws-lambda-nodejs": "1.80.0",
-    "@aws-cdk/core": "1.80.0"
+    "@aws-cdk/core": "1.80.0",
+    "aws-lambda": "^1.0.6",
+    "aws-sdk": "^2.822.0"
   },
-  "bundledDependencies": [],
+  "bundledDependencies": [
+    "aws-lambda",
+    "aws-sdk"
+  ],
   "keywords": [
     "aws",
     "badge",

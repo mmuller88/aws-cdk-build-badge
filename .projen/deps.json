@@ -6,6 +6,10 @@
       "type": "build"
     },
     {
+      "name": "@types/aws-lambda",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -22,6 +26,11 @@
     {
       "name": "@typescript-eslint/parser",
       "version": "^4.3.0",
+      "type": "build"
+    },
+    {
+      "name": "esbuild",
+      "version": "^0",
       "type": "build"
     },
     {
@@ -93,6 +102,14 @@
       "type": "build"
     },
     {
+      "name": "aws-lambda",
+      "type": "bundled"
+    },
+    {
+      "name": "aws-sdk",
+      "type": "bundled"
+    },
+    {
       "name": "@aws-cdk/aws-apigateway",
       "version": "1.80.0",
       "type": "peer"
@@ -135,6 +152,14 @@
     {
       "name": "@aws-cdk/core",
       "version": "1.80.0",
+      "type": "runtime"
+    },
+    {
+      "name": "aws-lambda",
+      "type": "runtime"
+    },
+    {
+      "name": "aws-sdk",
       "type": "runtime"
     }
   ],

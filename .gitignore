@@ -51,6 +51,7 @@ junit.xml
 !/.github/workflows/release.yml
 !/.mergify.yml
 !/.github/dependabot.yml
+!/.github/workflows/projenupgrade.yml
 !/.github/pull_request_template.md
 !/.github/workflows/rebuild-bot.yml
 !/test
