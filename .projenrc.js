@@ -1,8 +1,11 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
 const deps = [
+  '@types/aws-lambda',
   'aws-lambda',
   'aws-sdk',
+  '@mobileposse/auto-delete-bucket',
+  '@aws-cdk/aws-s3-deployment',
 ];
 
 const project = new AwsCdkConstructLibrary({
@@ -20,10 +23,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/aws-lambda-nodejs',
   ],
-  devDeps: [
-    '@types/aws-lambda',
-    'esbuild@^0',
-  ],
+  devDeps: deps,
   deps: deps,
   bundledDeps: deps,
   keywords: [

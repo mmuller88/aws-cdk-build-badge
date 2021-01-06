@@ -1,4 +1,5 @@
 import * as lambda from 'aws-lambda';
+// import * as succeeded from '../badges/';
 // import * as AWS from 'aws-sdk';
 
 
@@ -6,8 +7,27 @@ import * as lambda from 'aws-lambda';
  *
  * @param event
  */
-export async function handler(event: lambda.APIGatewayProxyEventV2) {
+export async function handler(event: lambda.APIGatewayProxyEventV2, _context: any) {
   console.log(event);
 
-  return { statusCode: 200, body: 'PASSING' };
+  _context.succeed({
+    location: 'https://[bucket-name].s3-eu-west-1.amazonaws.com/myimage.png',
+  });
+
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  // const fs = require('fs');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  // const image = require('./alps.png');
+  // const image = fs.readFileSync('./badges/succeeded.svg');
+
+  // return {
+  //   statusCode: 200,
+  //   headers:
+  //   {
+  //     'Content-Type': 'image/png',
+  //   },
+  //   // body: 'PASSING',
+  //   body: image.toString('base64'),
+  //   isBase64Encoded: true,
+  // };
 };
