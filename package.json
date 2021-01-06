@@ -25,11 +25,11 @@
   },
   "author": {
     "name": "martin.mueller",
-    "email": "m.mueller@unimed.de",
+    "email": "damadden88@googlemail.de",
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.73.0",
+    "@aws-cdk/assert": "1.80.0",
     "@types/jest": "^26.0.19",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
@@ -52,11 +52,24 @@
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
+    "@aws-cdk/aws-apigateway": "1.80.0",
+    "@aws-cdk/aws-lambda": "1.80.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.80.0",
+    "@aws-cdk/core": "1.80.0",
     "constructs": "^3.2.27"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "1.80.0",
+    "@aws-cdk/aws-lambda": "1.80.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.80.0",
+    "@aws-cdk/core": "1.80.0"
   },
   "bundledDependencies": [],
   "keywords": [
-    "cdk"
+    "aws",
+    "badge",
+    "cdk",
+    "codebuild"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
@@ -104,7 +117,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "aws-cdk-build-badge",
+        "module": "aws_cdk_build_badge"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

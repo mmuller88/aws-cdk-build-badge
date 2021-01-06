@@ -1,0 +1,494 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integ snapshot validation 1`] = `
+Object {
+  "Outputs": Object {
+    "BuildBadgeLambdaRestApiEndpoint63A20E45": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "https://",
+            Object {
+              "Ref": "BuildBadgeLambdaRestApi67D65870",
+            },
+            ".execute-api.",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            Object {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            Object {
+              "Ref": "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
+  },
+  "Parameters": Object {
+    "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95ArtifactHash38FB282C": Object {
+      "Description": "Artifact hash for asset \\"7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95\\"",
+      "Type": "String",
+    },
+    "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3BucketCD000C68": Object {
+      "Description": "S3 bucket for asset \\"7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95\\"",
+      "Type": "String",
+    },
+    "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3VersionKey0C42B932": Object {
+      "Description": "S3 key for asset version \\"7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95\\"",
+      "Type": "String",
+    },
+  },
+  "Resources": Object {
+    "BuildBadgeLambdaRestApi67D65870": Object {
+      "Properties": Object {
+        "Name": "LambdaRestApi",
+      },
+      "Type": "AWS::ApiGateway::RestApi",
+    },
+    "BuildBadgeLambdaRestApiANYApiPermissionTestmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYEF134B78": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgebadgeLambda93450534",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "BuildBadgeLambdaRestApi67D65870",
+              },
+              "/test-invoke-stage/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "BuildBadgeLambdaRestApiANYApiPermissionmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYE1C81673": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgebadgeLambda93450534",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "BuildBadgeLambdaRestApi67D65870",
+              },
+              "/",
+              Object {
+                "Ref": "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC",
+              },
+              "/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "BuildBadgeLambdaRestApiANYB4ECA9EA": Object {
+      "Properties": Object {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": Object {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                Object {
+                  "Fn::GetAtt": Array [
+                    "BuildBadgebadgeLambda93450534",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgeLambdaRestApi67D65870",
+            "RootResourceId",
+          ],
+        },
+        "RestApiId": Object {
+          "Ref": "BuildBadgeLambdaRestApi67D65870",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "BuildBadgeLambdaRestApiAccount2D0F8B5D": Object {
+      "DependsOn": Array [
+        "BuildBadgeLambdaRestApi67D65870",
+      ],
+      "Properties": Object {
+        "CloudWatchRoleArn": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgeLambdaRestApiCloudWatchRole5C0B77BD",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::ApiGateway::Account",
+    },
+    "BuildBadgeLambdaRestApiCloudWatchRole5C0B77BD": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "BuildBadgeLambdaRestApiDeployment08CF77EE08a3197784e226bf490b78ac6d0277ed": Object {
+      "DependsOn": Array [
+        "BuildBadgeLambdaRestApiproxyANY2FB04D37",
+        "BuildBadgeLambdaRestApiproxyAA6A28B8",
+        "BuildBadgeLambdaRestApiANYB4ECA9EA",
+      ],
+      "Properties": Object {
+        "Description": "Automatically created by the RestApi construct",
+        "RestApiId": Object {
+          "Ref": "BuildBadgeLambdaRestApi67D65870",
+        },
+      },
+      "Type": "AWS::ApiGateway::Deployment",
+    },
+    "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC": Object {
+      "Properties": Object {
+        "DeploymentId": Object {
+          "Ref": "BuildBadgeLambdaRestApiDeployment08CF77EE08a3197784e226bf490b78ac6d0277ed",
+        },
+        "RestApiId": Object {
+          "Ref": "BuildBadgeLambdaRestApi67D65870",
+        },
+        "StageName": "prod",
+      },
+      "Type": "AWS::ApiGateway::Stage",
+    },
+    "BuildBadgeLambdaRestApiproxyAA6A28B8": Object {
+      "Properties": Object {
+        "ParentId": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgeLambdaRestApi67D65870",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": Object {
+          "Ref": "BuildBadgeLambdaRestApi67D65870",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "BuildBadgeLambdaRestApiproxyANY2FB04D37": Object {
+      "Properties": Object {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": Object {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                Object {
+                  "Fn::GetAtt": Array [
+                    "BuildBadgebadgeLambda93450534",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": Object {
+          "Ref": "BuildBadgeLambdaRestApiproxyAA6A28B8",
+        },
+        "RestApiId": Object {
+          "Ref": "BuildBadgeLambdaRestApi67D65870",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "BuildBadgeLambdaRestApiproxyANYApiPermissionTestmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYproxy9DEC5D93": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgebadgeLambda93450534",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "BuildBadgeLambdaRestApi67D65870",
+              },
+              "/test-invoke-stage/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "BuildBadgeLambdaRestApiproxyANYApiPermissionmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYproxyFEBE5AAA": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgebadgeLambda93450534",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "BuildBadgeLambdaRestApi67D65870",
+              },
+              "/",
+              Object {
+                "Ref": "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "BuildBadgebadgeLambda93450534": Object {
+      "DependsOn": Array [
+        "BuildBadgebadgeLambdaServiceRoleDefaultPolicy337DE56F",
+        "BuildBadgebadgeLambdaServiceRole741B9F3C",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3BucketCD000C68",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3VersionKey0C42B932",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters7a7ce7390edf4d07d158012907d132c7b7b6a1c29dd996bc2c69288d6b798f95S3VersionKey0C42B932",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Handler": "badge.handler",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "BuildBadgebadgeLambdaServiceRole741B9F3C",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs12.x",
+        "TracingConfig": Object {
+          "Mode": "Active",
+        },
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "BuildBadgebadgeLambdaServiceRole741B9F3C": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "BuildBadgebadgeLambdaServiceRoleDefaultPolicy337DE56F": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "BuildBadgebadgeLambdaServiceRoleDefaultPolicy337DE56F",
+        "Roles": Array [
+          Object {
+            "Ref": "BuildBadgebadgeLambdaServiceRole741B9F3C",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+  },
+}
+`;
