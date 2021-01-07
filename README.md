@@ -14,6 +14,17 @@ How the native badges are working you find in the AWS docs:
 
 The construct implementation will try to mimic that behavior as much it makes sense.
 
+```
+aws apigateway update-integration-response \
+ --rest-api-id ff70btqcce \
+ --resource-id iwbue0 \
+ --http-method GET \
+ --status-code 200 \
+ --patch-operations '[{"op" : "replace", "path" : "/contentHandling", "value" : "CONVERT_TO_BINARY"}]' \
+ --profile damadden88 \
+ --region eu-central-1
+```
+
 # Example
 
 ...

@@ -4,14 +4,16 @@ const deps = [
   '@types/aws-lambda',
   'aws-lambda',
   'aws-sdk',
-  '@mobileposse/auto-delete-bucket',
+  '@types/gm',
+  'gm',
+  'gm-base64',
   '@aws-cdk/aws-s3-deployment',
 ];
 
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'damadden88@googlemail.de',
   authorName: 'martin.mueller',
-  cdkVersion: '1.80.0',
+  cdkVersion: '1.83.0',
   cdkVersionPinning: true,
   name: 'aws-cdk-build-badge',
   repositoryUrl: 'https://github.com/mmuller88/aws-cdk-build-badge',

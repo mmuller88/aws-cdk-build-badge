@@ -57,249 +57,20 @@ Object {
     },
   },
   "Parameters": Object {
-    "AssetParameters168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36cArtifactHash6013622C": Object {
-      "Description": "Artifact hash for asset \\"168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36c\\"",
+    "AssetParameters7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581ArtifactHash5219647B": Object {
+      "Description": "Artifact hash for asset \\"7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581\\"",
       "Type": "String",
     },
-    "AssetParameters168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36cS3Bucket7A271111": Object {
-      "Description": "S3 bucket for asset \\"168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36c\\"",
+    "AssetParameters7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581S3BucketE60D03FA": Object {
+      "Description": "S3 bucket for asset \\"7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581\\"",
       "Type": "String",
     },
-    "AssetParameters168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36cS3VersionKeyF14E336A": Object {
-      "Description": "S3 key for asset version \\"168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36c\\"",
-      "Type": "String",
-    },
-    "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1ArtifactHashDFF16A18": Object {
-      "Description": "Artifact hash for asset \\"392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1\\"",
-      "Type": "String",
-    },
-    "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3BucketC0082D36": Object {
-      "Description": "S3 bucket for asset \\"392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1\\"",
-      "Type": "String",
-    },
-    "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD": Object {
-      "Description": "S3 key for asset version \\"392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1\\"",
-      "Type": "String",
-    },
-    "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bArtifactHashBE2DEBAC": Object {
-      "Description": "Artifact hash for asset \\"40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95b\\"",
-      "Type": "String",
-    },
-    "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3Bucket447C65DF": Object {
-      "Description": "S3 bucket for asset \\"40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95b\\"",
-      "Type": "String",
-    },
-    "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3VersionKeyF85A1B50": Object {
-      "Description": "S3 key for asset version \\"40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95b\\"",
-      "Type": "String",
-    },
-    "AssetParametersc9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176ArtifactHash4E343C6C": Object {
-      "Description": "Artifact hash for asset \\"c9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176\\"",
-      "Type": "String",
-    },
-    "AssetParametersc9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176S3Bucket77147E20": Object {
-      "Description": "S3 bucket for asset \\"c9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176\\"",
-      "Type": "String",
-    },
-    "AssetParametersc9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176S3VersionKey4253216F": Object {
-      "Description": "S3 key for asset version \\"c9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176\\"",
+    "AssetParameters7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581S3VersionKeyAA72A6D9": Object {
+      "Description": "S3 key for asset version \\"7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581\\"",
       "Type": "String",
     },
   },
   "Resources": Object {
-    "AutoBucket7677dc81117d41c0b75bdb11cb84bb70DC15ED41": Object {
-      "DependsOn": Array [
-        "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C",
-        "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB",
-      ],
-      "Properties": Object {
-        "Code": Object {
-          "S3Bucket": Object {
-            "Ref": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3BucketC0082D36",
-          },
-          "S3Key": Object {
-            "Fn::Join": Array [
-              "",
-              Array [
-                Object {
-                  "Fn::Select": Array [
-                    0,
-                    Object {
-                      "Fn::Split": Array [
-                        "||",
-                        Object {
-                          "Ref": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD",
-                        },
-                      ],
-                    },
-                  ],
-                },
-                Object {
-                  "Fn::Select": Array [
-                    1,
-                    Object {
-                      "Fn::Split": Array [
-                        "||",
-                        Object {
-                          "Ref": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD",
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            ],
-          },
-        },
-        "Handler": "main.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
-            "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB",
-            "Arn",
-          ],
-        },
-        "Runtime": "nodejs10.x",
-        "Timeout": 900,
-      },
-      "Type": "AWS::Lambda::Function",
-    },
-    "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": Object {
-                "Service": "lambda.amazonaws.com",
-              },
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
-              "",
-              Array [
-                "arn:",
-                Object {
-                  "Ref": "AWS::Partition",
-                },
-                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-              ],
-            ],
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Role",
-    },
-    "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": Array [
-                "s3:GetObject*",
-                "s3:GetBucket*",
-                "s3:List*",
-                "s3:DeleteObject*",
-                "s3:PutObject*",
-                "s3:Abort*",
-              ],
-              "Effect": "Allow",
-              "Resource": Array [
-                Object {
-                  "Fn::GetAtt": Array [
-                    "BuildBadgebadgeBucket4788B140",
-                    "Arn",
-                  ],
-                },
-                Object {
-                  "Fn::Join": Array [
-                    "",
-                    Array [
-                      Object {
-                        "Fn::GetAtt": Array [
-                          "BuildBadgebadgeBucket4788B140",
-                          "Arn",
-                        ],
-                      },
-                      "/*",
-                    ],
-                  ],
-                },
-              ],
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "PolicyName": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C",
-        "Roles": Array [
-          Object {
-            "Ref": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB",
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Policy",
-    },
-    "BuildBadgeBucketDeploymentCustomResource1F74E560": Object {
-      "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "DestinationBucketName": Object {
-          "Ref": "BuildBadgebadgeBucket4788B140",
-        },
-        "Prune": true,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
-            "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
-            "Arn",
-          ],
-        },
-        "SourceBucketNames": Array [
-          Object {
-            "Ref": "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3Bucket447C65DF",
-          },
-        ],
-        "SourceObjectKeys": Array [
-          Object {
-            "Fn::Join": Array [
-              "",
-              Array [
-                Object {
-                  "Fn::Select": Array [
-                    0,
-                    Object {
-                      "Fn::Split": Array [
-                        "||",
-                        Object {
-                          "Ref": "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3VersionKeyF85A1B50",
-                        },
-                      ],
-                    },
-                  ],
-                },
-                Object {
-                  "Fn::Select": Array [
-                    1,
-                    Object {
-                      "Fn::Split": Array [
-                        "||",
-                        Object {
-                          "Ref": "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3VersionKeyF85A1B50",
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            ],
-          },
-        ],
-      },
-      "Type": "Custom::CDKBucketDeployment",
-      "UpdateReplacePolicy": "Delete",
-    },
     "BuildBadgeLambdaRestApi67D65870": Object {
       "Properties": Object {
         "Name": "LambdaRestApi",
@@ -638,7 +409,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParameters168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36cS3Bucket7A271111",
+            "Ref": "AssetParameters7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581S3BucketE60D03FA",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -651,7 +422,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36cS3VersionKeyF14E336A",
+                          "Ref": "AssetParameters7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581S3VersionKeyAA72A6D9",
                         },
                       ],
                     },
@@ -664,7 +435,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters168c86151737930d8f0f10eba685137d67ec1f4d85268c65b3e4802c20d4c36cS3VersionKeyF14E336A",
+                          "Ref": "AssetParameters7e057f9d1bf1ea3100dca0d9d55fb41ec2c14318f4064abe0e54e3c759cc5581S3VersionKeyAA72A6D9",
                         },
                       ],
                     },
@@ -690,59 +461,6 @@ Object {
         "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
-    },
-    "BuildBadgebadgeBucket4788B140": Object {
-      "DeletionPolicy": "Delete",
-      "Type": "AWS::S3::Bucket",
-      "UpdateReplacePolicy": "Delete",
-    },
-    "BuildBadgebadgeBucketAutoBucket86CDDDAF": Object {
-      "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "BucketName": Object {
-          "Ref": "BuildBadgebadgeBucket4788B140",
-        },
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
-            "AutoBucket7677dc81117d41c0b75bdb11cb84bb70DC15ED41",
-            "Arn",
-          ],
-        },
-      },
-      "Type": "Custom::AutoDeleteBucket",
-      "UpdateReplacePolicy": "Delete",
-    },
-    "BuildBadgebadgeBucketPolicyBCCE0218": Object {
-      "Properties": Object {
-        "Bucket": Object {
-          "Ref": "BuildBadgebadgeBucket4788B140",
-        },
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": "s3:GetObject",
-              "Effect": "Allow",
-              "Principal": "*",
-              "Resource": Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    Object {
-                      "Fn::GetAtt": Array [
-                        "BuildBadgebadgeBucket4788B140",
-                        "Arn",
-                      ],
-                    },
-                    "/*",
-                  ],
-                ],
-              },
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-      },
-      "Type": "AWS::S3::BucketPolicy",
     },
     "BuildBadgebadgeServiceRoleE417F11F": Object {
       "Properties": Object {
@@ -774,183 +492,6 @@ Object {
         ],
       },
       "Type": "AWS::IAM::Role",
-    },
-    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536": Object {
-      "DependsOn": Array [
-        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
-        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
-      ],
-      "Properties": Object {
-        "Code": Object {
-          "S3Bucket": Object {
-            "Ref": "AssetParametersc9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176S3Bucket77147E20",
-          },
-          "S3Key": Object {
-            "Fn::Join": Array [
-              "",
-              Array [
-                Object {
-                  "Fn::Select": Array [
-                    0,
-                    Object {
-                      "Fn::Split": Array [
-                        "||",
-                        Object {
-                          "Ref": "AssetParametersc9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176S3VersionKey4253216F",
-                        },
-                      ],
-                    },
-                  ],
-                },
-                Object {
-                  "Fn::Select": Array [
-                    1,
-                    Object {
-                      "Fn::Split": Array [
-                        "||",
-                        Object {
-                          "Ref": "AssetParametersc9ac4b3b65f3510a2088b7fd003de23d2aefac424025eb168725ce6769e3c176S3VersionKey4253216F",
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            ],
-          },
-        },
-        "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
-            "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
-            "Arn",
-          ],
-        },
-        "Runtime": "python3.6",
-        "Timeout": 900,
-      },
-      "Type": "AWS::Lambda::Function",
-    },
-    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": Object {
-                "Service": "lambda.amazonaws.com",
-              },
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
-              "",
-              Array [
-                "arn:",
-                Object {
-                  "Ref": "AWS::Partition",
-                },
-                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-              ],
-            ],
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Role",
-    },
-    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": Array [
-                "s3:GetObject*",
-                "s3:GetBucket*",
-                "s3:List*",
-              ],
-              "Effect": "Allow",
-              "Resource": Array [
-                Object {
-                  "Fn::Join": Array [
-                    "",
-                    Array [
-                      "arn:",
-                      Object {
-                        "Ref": "AWS::Partition",
-                      },
-                      ":s3:::",
-                      Object {
-                        "Ref": "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3Bucket447C65DF",
-                      },
-                    ],
-                  ],
-                },
-                Object {
-                  "Fn::Join": Array [
-                    "",
-                    Array [
-                      "arn:",
-                      Object {
-                        "Ref": "AWS::Partition",
-                      },
-                      ":s3:::",
-                      Object {
-                        "Ref": "AssetParameters40373ba728c7e7a9f6448aa23cef87a64644720f30c1884588c79501354ba95bS3Bucket447C65DF",
-                      },
-                      "/*",
-                    ],
-                  ],
-                },
-              ],
-            },
-            Object {
-              "Action": Array [
-                "s3:GetObject*",
-                "s3:GetBucket*",
-                "s3:List*",
-                "s3:DeleteObject*",
-                "s3:PutObject*",
-                "s3:Abort*",
-              ],
-              "Effect": "Allow",
-              "Resource": Array [
-                Object {
-                  "Fn::GetAtt": Array [
-                    "BuildBadgebadgeBucket4788B140",
-                    "Arn",
-                  ],
-                },
-                Object {
-                  "Fn::Join": Array [
-                    "",
-                    Array [
-                      Object {
-                        "Fn::GetAtt": Array [
-                          "BuildBadgebadgeBucket4788B140",
-                          "Arn",
-                        ],
-                      },
-                      "/*",
-                    ],
-                  ],
-                },
-              ],
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
-        "Roles": Array [
-          Object {
-            "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Policy",
     },
   },
 }

@@ -16,6 +16,19 @@ export class BuildBadge extends core.Construct {
     props;
 
     const badgeLambda = new lambdajs.NodejsFunction(this, 'badge', {
+      bundling: {
+        commandHooks: {
+          beforeBundling(inputDir: string, outputDir: string): string[] {
+            return [`cp ${inputDir}/badges/alps.png ${outputDir}/badges/alps.png`];
+          },
+          beforeInstall(_inputDir: string, _outputDir: string): string[] {
+            return [];
+          },
+          afterBundling(_inputDir: string, _outputDir: string): string[] {
+            return [];
+          },
+        },
+      },
       timeout: core.Duration.minutes(15),
       // handler: 'get',
       // tracing: lambda.Tracing.ACTIVE,
@@ -30,6 +43,7 @@ export class BuildBadge extends core.Construct {
 
     const lambdaRestApi = new apigateway.LambdaRestApi(this, 'LambdaRestApi', {
       handler: badgeLambda,
+      binaryMediaTypes: ['*/*'],
     });
 
     this.badgeUrl = lambdaRestApi.url;

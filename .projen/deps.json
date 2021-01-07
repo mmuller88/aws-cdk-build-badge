@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "build"
     },
     {
@@ -10,11 +10,11 @@
       "type": "build"
     },
     {
-      "name": "@mobileposse/auto-delete-bucket",
+      "name": "@types/aws-lambda",
       "type": "build"
     },
     {
-      "name": "@types/aws-lambda",
+      "name": "@types/gm",
       "type": "build"
     },
     {
@@ -58,6 +58,14 @@
     },
     {
       "name": "eslint-plugin-import",
+      "type": "build"
+    },
+    {
+      "name": "gm",
+      "type": "build"
+    },
+    {
+      "name": "gm-base64",
       "type": "build"
     },
     {
@@ -117,11 +125,11 @@
       "type": "bundled"
     },
     {
-      "name": "@mobileposse/auto-delete-bucket",
+      "name": "@types/aws-lambda",
       "type": "bundled"
     },
     {
-      "name": "@types/aws-lambda",
+      "name": "@types/gm",
       "type": "bundled"
     },
     {
@@ -133,23 +141,31 @@
       "type": "bundled"
     },
     {
+      "name": "gm",
+      "type": "bundled"
+    },
+    {
+      "name": "gm-base64",
+      "type": "bundled"
+    },
+    {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "peer"
     },
     {
@@ -159,17 +175,17 @@
     },
     {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
@@ -178,15 +194,15 @@
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.80.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@mobileposse/auto-delete-bucket",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@types/aws-lambda",
+      "type": "runtime"
+    },
+    {
+      "name": "@types/gm",
       "type": "runtime"
     },
     {
@@ -195,6 +211,14 @@
     },
     {
       "name": "aws-sdk",
+      "type": "runtime"
+    },
+    {
+      "name": "gm",
+      "type": "runtime"
+    },
+    {
+      "name": "gm-base64",
       "type": "runtime"
     }
   ],
