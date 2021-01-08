@@ -38,10 +38,7 @@ export class BuildBadge extends core.Construct {
       environment: {
         ACCOUNT: props.hideAccountId ? 'XXX' : parent.account,
       },
-      // layers: [layer],
       timeout: core.Duration.minutes(15),
-      // handler: 'get',
-      // tracing: lambda.Tracing.ACTIVE,
     });
 
     badgeLambda.addToRolePolicy(new iam.PolicyStatement({
