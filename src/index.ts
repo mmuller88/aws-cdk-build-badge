@@ -2,11 +2,16 @@
 
 import * as apigateway from '@aws-cdk/aws-apigateway';
 // import * as lambda from '@aws-cdk/aws-lambda';
+import * as iam from '@aws-cdk/aws-iam';
 import * as lambdajs from '@aws-cdk/aws-lambda-nodejs';
 import * as core from '@aws-cdk/core';
 
 export interface BuildBadgeProps {
-
+  /**
+   * If you don't want to expose your account id with using ?url=true in the query.
+   * Instead it will use XXX for your account id which you can replace with your id manually
+   */
+  readonly hideAccountId?: boolean;
 }
 
 export class BuildBadge extends core.Construct {
@@ -17,29 +22,32 @@ export class BuildBadge extends core.Construct {
 
     const badgeLambda = new lambdajs.NodejsFunction(this, 'badge', {
       bundling: {
+        // nodeModules: ['text-to-image'],
         commandHooks: {
-          beforeBundling(inputDir: string, outputDir: string): string[] {
-            return [`cp ${inputDir}/badges/alps.png ${outputDir}/badges/alps.png`];
+          afterBundling(inputDir: string, outputDir: string): string[] {
+            return [`mkdir ${outputDir}/badges && cp -r ${inputDir}/badges ${outputDir}`];
           },
           beforeInstall(_inputDir: string, _outputDir: string): string[] {
             return [];
           },
-          afterBundling(_inputDir: string, _outputDir: string): string[] {
+          beforeBundling(_inputDir: string, _outputDir: string): string[] {
             return [];
           },
         },
+      }, // codebuild:ListBuildsForProject
+      environment: {
+        ACCOUNT: props.hideAccountId ? 'XXX' : parent.account,
       },
+      // layers: [layer],
       timeout: core.Duration.minutes(15),
       // handler: 'get',
       // tracing: lambda.Tracing.ACTIVE,
     });
 
-    // const badgeLambda = new lambda.Function(this, 'badgeLambda', {
-    //   runtime: lambda.Runtime.NODEJS_12_X,
-    //   tracing: lambda.Tracing.ACTIVE,
-    //   handler: 'badge.handler',
-    //   code: lambda.Code.fromAsset(path.join(__dirname, '../lib')),
-    // });
+    badgeLambda.addToRolePolicy(new iam.PolicyStatement({
+      actions: ['codebuild:ListBuildsForProject', 'codebuild:BatchGetBuilds'],
+      resources: ['*'],
+    }));
 
     const lambdaRestApi = new apigateway.LambdaRestApi(this, 'LambdaRestApi', {
       handler: badgeLambda,
@@ -48,8 +56,12 @@ export class BuildBadge extends core.Construct {
 
     this.badgeUrl = lambdaRestApi.url;
 
+    new core.CfnOutput(this, 'BadgeBuildUrl', {
+      value: `${this.badgeUrl}?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&&url=true`,
+    });
+
     new core.CfnOutput(this, 'BadgeUrl', {
-      value: this.badgeUrl,
+      value: `${this.badgeUrl}?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6`,
     });
 
   }

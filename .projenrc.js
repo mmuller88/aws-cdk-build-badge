@@ -4,10 +4,11 @@ const deps = [
   '@types/aws-lambda',
   'aws-lambda',
   'aws-sdk',
-  '@types/gm',
-  'gm',
-  'gm-base64',
-  '@aws-cdk/aws-s3-deployment',
+  // '@types/gm',
+  // 'gm',
+  // 'gm-base64',
+  // '@aws-cdk/aws-s3-deployment',
+  // 'text-to-image',
 ];
 
 const project = new AwsCdkConstructLibrary({
@@ -23,6 +24,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/core',
+    '@aws-cdk/aws-iam',
     '@aws-cdk/aws-lambda-nodejs',
   ],
   devDeps: deps,
