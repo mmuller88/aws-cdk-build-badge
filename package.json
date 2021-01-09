@@ -135,10 +135,6 @@
       "python": {
         "distName": "aws-cdk-build-badge",
         "module": "aws_cdk_build_badge"
-      },
-      "dotnet": {
-        "namespace": "com.github.mmuller88",
-        "packageId": "com.github.mmuller88.awsCdkBuildBadge"
       }
     },
     "tsc": {

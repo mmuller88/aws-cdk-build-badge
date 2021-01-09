@@ -4,11 +4,6 @@ const deps = [
   '@types/aws-lambda',
   'aws-lambda',
   'aws-sdk',
-  // '@types/gm',
-  // 'gm',
-  // 'gm-base64',
-  // '@aws-cdk/aws-s3-deployment',
-  // 'text-to-image',
 ];
 
 const project = new AwsCdkConstructLibrary({
@@ -40,10 +35,10 @@ const project = new AwsCdkConstructLibrary({
     distName: 'aws-cdk-build-badge',
     module: 'aws_cdk_build_badge',
   },
-  dotnet: {
-    dotNetNamespace: 'com.github.mmuller88',
-    packageId: 'com.github.mmuller88.awsCdkBuildBadge',
-  },
+  // dotnet: {
+  //   dotNetNamespace: 'com.github.mmuller88',
+  //   packageId: 'com.github.mmuller88.awsCdkBuildBadge',
+  // },
 });
 
 project.setScript('deploy', 'cdk deploy');

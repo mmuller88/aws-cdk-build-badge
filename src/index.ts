@@ -23,7 +23,6 @@ export class BuildBadge extends core.Construct {
 
     const badgeLambda = new lambdajs.NodejsFunction(this, 'badge', {
       bundling: {
-        // nodeModules: ['text-to-image'],
         commandHooks: {
           afterBundling(inputDir: string, outputDir: string): string[] {
             return [`mkdir ${outputDir}/badges && cp -r ${inputDir}/badges ${outputDir}`];
@@ -35,7 +34,7 @@ export class BuildBadge extends core.Construct {
             return [];
           },
         },
-      }, // codebuild:ListBuildsForProject
+      },
       environment: {
         ACCOUNT: props?.hideAccountID ? (props.hideAccountID === 'no' ? parent.account : props.hideAccountID) : '123',
       },
