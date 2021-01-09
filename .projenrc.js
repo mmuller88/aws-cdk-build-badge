@@ -36,10 +36,10 @@ const project = new AwsCdkConstructLibrary({
     distName: 'aws-cdk-build-badge',
     module: 'aws_cdk_build_badge',
   },
-  // dotnet: {
-  //   dotNetNamespace: 'com.github.mmuller88',
-  //   packageId: 'com.github.mmuller88.awsCdkBuildBadge',
-  // },
+  dotnet: {
+    dotNetNamespace: 'com.github.mmuller88',
+    packageId: 'com.github.mmuller88.awsCdkBuildBadge',
+  },
 });
 
 project.setScript('deploy', 'cdk deploy');
