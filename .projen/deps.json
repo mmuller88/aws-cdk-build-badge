@@ -37,6 +37,11 @@
       "type": "build"
     },
     {
+      "name": "esbuild",
+      "version": "^0",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "type": "build"
     },
@@ -117,6 +122,11 @@
       "type": "bundled"
     },
     {
+      "name": "esbuild",
+      "version": "^0",
+      "type": "bundled"
+    },
+    {
       "name": "@aws-cdk/aws-apigateway",
       "version": "1.83.0",
       "type": "peer"
@@ -181,6 +191,11 @@
     },
     {
       "name": "aws-sdk",
+      "type": "runtime"
+    },
+    {
+      "name": "esbuild",
+      "version": "^0",
       "type": "runtime"
     }
   ],
