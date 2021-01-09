@@ -1,5 +1,6 @@
 [![NPM version](https://badge.fury.io/js/aws-cdk-build-badge.svg)](https://badge.fury.io/js/aws-cdk-build-badge)
 [![PyPI version](https://badge.fury.io/py/aws-cdk-build-badge.svg)](https://badge.fury.io/py/aws-cdk-build-badge)
+[![.NET version](https://img.shields.io/nuget/v/com.github.mmuller88.awsCdkBuildBadge.svg?style=flat-square)](https://www.nuget.org/packages/com.github.mmuller88.awsCdkBuildBadge/)
 ![Release](https://github.com/mmuller88/aws-cdk-build-badge/workflows/Release/badge.svg)
 
 # aws-cdk-build-badge
