@@ -1,29 +1,44 @@
 import * as lambda from 'aws-lambda';
-// import * as succeeded from '../badges/';
 import * as AWS from 'aws-sdk';
 
 const codebuild = new AWS.CodeBuild();
 
-/**
- *
- * @param event
- */
-export async function handler(event: lambda.APIGatewayProxyEventV2, _context: any) {
-  console.log(`event: ${JSON.stringify(event)}`);
+export async function handler(event: lambda.APIGatewayProxyEventV2) {
+  console.debug(`event: ${JSON.stringify(event)}`);
 
-  const projectName = event.queryStringParameters?.projectName; // 'PipelineCustomStageprodTest-Fdei5bm2ulR6';
+  const projectName = event.queryStringParameters?.projectName;
   const onlyUrl = event.queryStringParameters?.url;
 
-  const builds = await codebuild.listBuildsForProject({
-    projectName: projectName || '',
-  }).promise();
+  if (!projectName || projectName === '') {
+    throw 'projectName in query parameter is not existing or empty!';
+  }
 
-  console.log(`lastBuildStatus: ${JSON.stringify(builds)}`);
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const fs = require('fs');
+
+  let builds;
+  try {
+    builds = await codebuild.listBuildsForProject({
+      projectName: projectName || '',
+    }).promise();
+  } catch (e) {
+    return {
+      statusCode: 200,
+      headers:
+      {
+        'Content-Type': 'image/svg+xml',
+      },
+      body: fs.readFileSync('./badges/not_found.svg').toString('base64'),
+      isBase64Encoded: true,
+    };
+  }
+
+  console.debug(`lastBuildStatus: ${JSON.stringify(builds)}`);
 
   const lastBuildId = builds.ids?.[0] || '';
 
   const region = process.env.AWS_REGION;
-  const account = process.env.ACCOUNT || '981237193288';
+  const account = process.env.ACCOUNT;
 
   if (onlyUrl === 'true') {
     return {
@@ -38,11 +53,11 @@ export async function handler(event: lambda.APIGatewayProxyEventV2, _context: an
     ids: [lastBuildId],
   }).promise();
 
-  console.log(`lastBuild: ${JSON.stringify(lastBuild)}`);
+  console.debug(`lastBuild: ${JSON.stringify(lastBuild)}`);
 
   const lastBuildStatus = lastBuild.builds?.[0].buildStatus;
 
-  console.log(`lastBuildStatus: ${lastBuildStatus}`);
+  console.debug(`lastBuildStatus: ${lastBuildStatus}`);
 
   let imagePath = './badges/failed.svg';
 
@@ -72,11 +87,6 @@ export async function handler(event: lambda.APIGatewayProxyEventV2, _context: an
       break;
     }
   }
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const fs = require('fs');
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  // const image = require('./alps.png');
-  const image = fs.readFileSync(imagePath);
 
   return {
     statusCode: 200,
@@ -84,8 +94,7 @@ export async function handler(event: lambda.APIGatewayProxyEventV2, _context: an
     {
       'Content-Type': 'image/svg+xml',
     },
-    // body: 'PASSING',
-    body: image.toString('base64'),
+    body: fs.readFileSync(imagePath).toString('base64'),
     isBase64Encoded: true,
   };
 };

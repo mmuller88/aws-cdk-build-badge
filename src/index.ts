@@ -8,17 +8,18 @@ import * as core from '@aws-cdk/core';
 
 export interface BuildBadgeProps {
   /**
-   * If you don't want to expose your account id with using ?url=true in the query.
-   * Instead it will use XXX for your account id which you can replace with your id manually
+   * Thats a little safety feature. Set it to 'no' for allowing to see your account id when retrieving the CodeBuild URL.
+   * You can as well use a pattern which hides part of your account id like XX1237193288
+   *
+   * @default - not set and account id will be shown as 123
    */
-  readonly hideAccountId?: boolean;
+  readonly hideAccountID?: string;
 }
 
 export class BuildBadge extends core.Construct {
   readonly badgeUrl: string;
-  constructor(parent: core.Stack, id: string, props: BuildBadgeProps) {
+  constructor(parent: core.Stack, id: string, props?: BuildBadgeProps) {
     super(parent, id);
-    props;
 
     const badgeLambda = new lambdajs.NodejsFunction(this, 'badge', {
       bundling: {
@@ -36,7 +37,7 @@ export class BuildBadge extends core.Construct {
         },
       }, // codebuild:ListBuildsForProject
       environment: {
-        ACCOUNT: props.hideAccountId ? 'XXX' : parent.account,
+        ACCOUNT: props?.hideAccountID ? (props.hideAccountID === 'no' ? parent.account : props.hideAccountID) : '123',
       },
       timeout: core.Duration.minutes(15),
     });
@@ -54,11 +55,11 @@ export class BuildBadge extends core.Construct {
     this.badgeUrl = lambdaRestApi.url;
 
     new core.CfnOutput(this, 'BadgeBuildUrl', {
-      value: `${this.badgeUrl}?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&&url=true`,
+      value: `${this.badgeUrl}?url=true&projectName=XXX`,
     });
 
     new core.CfnOutput(this, 'BadgeUrl', {
-      value: `${this.badgeUrl}?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6`,
+      value: `${this.badgeUrl}?projectName=XXX`,
     });
 
   }

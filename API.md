@@ -28,12 +28,13 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 
 
 ```ts
-new BuildBadge(parent: Stack, id: string, props: BuildBadgeProps)
+new BuildBadge(parent: Stack, id: string, props?: BuildBadgeProps)
 ```
 
 * **parent** (<code>[Stack](#aws-cdk-core-stack)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[BuildBadgeProps](#aws-cdk-build-badge-buildbadgeprops)</code>)  *No description*
+  * **hideAccountID** (<code>string</code>)  Thats a little safety feature. __*Default*__: not set and account id will be shown as 123
 
 
 
@@ -49,6 +50,13 @@ Name | Type | Description
 ## struct BuildBadgeProps  <a id="aws-cdk-build-badge-buildbadgeprops"></a>
 
 
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**hideAccountID**? | <code>string</code> | Thats a little safety feature.<br/>__*Default*__: not set and account id will be shown as 123
 
 
 

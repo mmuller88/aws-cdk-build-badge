@@ -1,11 +1,10 @@
 [![NPM version](https://badge.fury.io/js/aws-cdk-build-badge.svg)](https://badge.fury.io/js/aws-cdk-build-badge)
 [![PyPI version](https://badge.fury.io/py/aws-cdk-build-badge.svg)](https://badge.fury.io/py/aws-cdk-build-badge)
-Codebuild Synth: [![CodeBuild test build](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
 ![Release](https://github.com/mmuller88/aws-cdk-build-badge/workflows/Release/badge.svg)
 
 # aws-cdk-build-badge
 
-Thats an AWS CDK Construct for get the status of a CodeBuild Project with has CodePipeline as source. Thats it as currently it is a limitation to create a badge for a project with has CodePipeline as source:
+This an AWS CDK custom construct for get the status of a CodeBuild Project with has CodePipeline as source. That is currently not possible:
 
 - https://github.com/aws/aws-cdk/issues/1749
 
@@ -13,22 +12,26 @@ How the native badges are working you find in the AWS docs:
 
 - https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-badges.html
 
-The construct implementation will try to mimic that behavior as much it makes sense.
-
-```
-aws apigateway update-integration-response \
- --rest-api-id ff70btqcce \
- --resource-id iwbue0 \
- --http-method GET \
- --status-code 200 \
- --patch-operations '[{"op" : "replace", "path" : "/contentHandling", "value" : "CONVERT_TO_BINARY"}]' \
- --profile damadden88 \
- --region eu-central-1
-```
+After you created the build badge construct you can use the api gateway url to get the badge picture. Additionally you can retrieve the url to to the CodeBuild build with adding ?url=true to the query parameter. See the example.
 
 # Example
 
-...
+Codebuild Synth: [![CodeBuild test build](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
+
+```ts
+const app = new cdk.App();
+
+const stack = new cdk.Stack(app, 'my-build-badge-demo-stack');
+
+// without exposing the account id in the url when using ?url=true
+new BuildBadge(stack, 'BuildBadge');
+
+// with exposing the account id in the url when using ?url=true
+new BuildBadge(stack, 'BuildBadge2', { hideAccountID: 'no' });
+
+// partly exposing the account id in the url when using ?url=true
+new BuildBadge(stack, 'BuildBadge3', { hideAccountID: 'XX123356' });
+```
 
 # Thanks To
 

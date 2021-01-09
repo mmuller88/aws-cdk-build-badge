@@ -6,14 +6,9 @@ export class IntegTesting {
   constructor() {
     const app = new cdk.App();
 
-    const env = {
-      region: process.env.CDK_DEFAULT_REGION,
-      account: process.env.CDK_DEFAULT_ACCOUNT,
-    };
+    const stack = new cdk.Stack(app, 'my-build-badge-demo-stack');
 
-    const stack = new cdk.Stack(app, 'my-build-badge-demo-stack', { env });
-
-    new BuildBadge(stack, 'BuildBadge', {});
+    new BuildBadge(stack, 'BuildBadge');
 
     this.stack = [stack];
   }
