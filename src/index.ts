@@ -25,7 +25,7 @@ export class BuildBadge extends core.Construct {
       bundling: {
         commandHooks: {
           afterBundling(inputDir: string, outputDir: string): string[] {
-            return [`mkdir ${outputDir}/badges && cp -r ${inputDir}/badges ${outputDir}`];
+            return [`mkdir ${outputDir}/badges`, `cp -r ${inputDir}/node_modules/aws-cdk-build-badge/badges ${outputDir} 2>/dev/null || cp -r ${inputDir}/badges ${outputDir}`];
           },
           beforeInstall(_inputDir: string, _outputDir: string): string[] {
             return [];
