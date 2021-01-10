@@ -2,6 +2,36 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
+      "version": "^undefined",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/assert",
+      "version": "1.83.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-apigateway",
+      "version": "1.83.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-iam",
+      "version": "1.83.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-lambda-nodejs",
+      "version": "1.83.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-lambda",
+      "version": "1.83.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/core",
       "version": "1.83.0",
       "type": "build"
     },
@@ -110,6 +140,11 @@
       "type": "build"
     },
     {
+      "name": "@aws-cdk/assert",
+      "version": "1.83.0",
+      "type": "bundled"
+    },
+    {
       "name": "@types/aws-lambda",
       "type": "bundled"
     },
@@ -157,27 +192,7 @@
       "type": "peer"
     },
     {
-      "name": "@aws-cdk/aws-apigateway",
-      "version": "1.83.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-iam",
-      "version": "1.83.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "1.83.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-lambda",
-      "version": "1.83.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/core",
+      "name": "@aws-cdk/assert",
       "version": "1.83.0",
       "type": "runtime"
     },

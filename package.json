@@ -32,6 +32,11 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.83.0",
+    "@aws-cdk/aws-apigateway": "1.83.0",
+    "@aws-cdk/aws-iam": "1.83.0",
+    "@aws-cdk/aws-lambda": "1.83.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.83.0",
+    "@aws-cdk/core": "1.83.0",
     "@types/aws-lambda": "^8.10.70",
     "@types/jest": "^26.0.20",
     "@types/node": "^10.17.0",
@@ -48,7 +53,7 @@
     "jest-junit": "^12",
     "jsii": "^1.16.0",
     "jsii-diff": "^1.16.0",
-    "jsii-docgen": "^1.8.15",
+    "jsii-docgen": "^1.8.16",
     "jsii-pacmak": "^1.16.0",
     "jsii-release": "^0.2.10",
     "json-schema": "^0.3.0",
@@ -66,17 +71,14 @@
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "1.83.0",
-    "@aws-cdk/aws-iam": "1.83.0",
-    "@aws-cdk/aws-lambda": "1.83.0",
-    "@aws-cdk/aws-lambda-nodejs": "1.83.0",
-    "@aws-cdk/core": "1.83.0",
+    "@aws-cdk/assert": "1.83.0",
     "@types/aws-lambda": "^8.10.70",
     "aws-lambda": "^1.0.6",
     "aws-sdk": "^2.824.0",
     "esbuild": "^0"
   },
   "bundledDependencies": [
+    "@aws-cdk/assert",
     "@types/aws-lambda",
     "aws-lambda",
     "aws-sdk",

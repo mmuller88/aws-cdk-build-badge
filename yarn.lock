@@ -4149,7 +4149,7 @@ jsii-diff@^1.16.0:
     typescript "~3.9.7"
     yargs "^16.1.1"
 
-jsii-docgen@^1.8.15:
+jsii-docgen@^1.8.16:
   version "1.8.16"
   resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.16.tgz#cc8ca4fce15e293ba8131e1adcfa3297a0a60147"
   integrity sha512-fzUXaf22XFa+XWP8fkwv5Opcoo9fFWmjqmhyHmwksjWrRc4dUbawl8YOzCiR7kTnpJqUAE5eAScNpm2xn9hROg==
@@ -6430,9 +6430,9 @@ unset-value@^1.0.0:
     isobject "^3.0.0"
 
 uri-js@^4.2.2:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.0.tgz#aa714261de793e8a82347a7bcc9ce74e86f28602"
-  integrity sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
+  integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
 
