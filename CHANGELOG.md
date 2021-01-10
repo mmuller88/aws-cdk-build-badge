@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.1...v0.0.2) (2021-01-09)
+
+
+### Features
+
+* add esbuild ([871ef24](https://github.com/mmuller88/aws-cdk-build-badge/commit/871ef24f4335be2105457f2a604df5181fb79f44))
+
 ### 0.0.1 (2021-01-09)
 
 
