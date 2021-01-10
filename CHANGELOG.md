@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.2...v0.0.3) (2021-01-10)
+
+
+### Features
+
+* get rid of the direct cdk dependency ([9ea5c11](https://github.com/mmuller88/aws-cdk-build-badge/commit/9ea5c11d1f672c7ea47bb6c8e9d2c323ea6d7697))
+* get rid of the direct cdk dependency ([926e904](https://github.com/mmuller88/aws-cdk-build-badge/commit/926e904d51ecc926fd5b5f1790ad30a5b1d7a256))
+
 ### [0.0.2](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.1...v0.0.2) (2021-01-09)
 
 
