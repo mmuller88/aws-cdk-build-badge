@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.5...v0.0.6) (2021-01-10)
+
+
+### Features
+
+* add default project name ([dc2d5da](https://github.com/mmuller88/aws-cdk-build-badge/commit/dc2d5da35cf887fe28fd6ad5ef04bddca3170c57))
+* add default project name ([dc59476](https://github.com/mmuller88/aws-cdk-build-badge/commit/dc5947662dad27d05d481e5cd9597c607af28765))
+
 ### [0.0.5](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.4...v0.0.5) (2021-01-10)
 
 
