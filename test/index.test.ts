@@ -29,6 +29,13 @@ describe('Get', () => {
         expect(stack).toHaveResourceLike('AWS::Lambda::Function');
         expect(JSON.stringify(SynthUtils.toCloudFormation(stack))).toContain('"ACCOUNT\":\"XX123\"');
       });
+
+      test('with default project name', () => {
+        new BuildBadge(stack, 'BuildBadge4', { defaultProjectName: 'ups' });
+        expect(stack).toHaveResourceLike('AWS::ApiGateway::Method');
+        expect(stack).toHaveResourceLike('AWS::Lambda::Function');
+        expect(JSON.stringify(SynthUtils.toCloudFormation(stack))).toContain('\"DEFAULT_PROJECT_NAME\":\"ups\"');
+      });
     });
   });
 });

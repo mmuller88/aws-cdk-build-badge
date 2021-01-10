@@ -6,7 +6,7 @@ const codebuild = new AWS.CodeBuild();
 export async function handler(event: lambda.APIGatewayProxyEventV2) {
   console.debug(`event: ${JSON.stringify(event)}`);
 
-  const projectName = event.queryStringParameters?.projectName;
+  const projectName = event.queryStringParameters?.projectName || process.env.DEFAULT_PROJECT_NAME;
   const onlyUrl = event.queryStringParameters?.url;
 
   if (!projectName || projectName === '') {

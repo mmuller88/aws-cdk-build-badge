@@ -32,9 +32,26 @@ describe('test index.badge.ts lambda', () => {
   describe('succeeded when', () => {
 
     const fs = require('fs');
-    test('only url', async () => {
+    test('only url with projectName in url', async () => {
       AWS.listBuildsForProjectResponse.mockReturnValueOnce({ ids: ['1', '2'] });
       mockedApiEvent.queryStringParameters = { projectName: 'albern', url: 'true' };
+      process.env.AWS_REGION = 'test_region';
+      process.env.ACCOUNT = '123';
+      const response = await handler(mockedApiEvent);
+      expect(codebuild.listBuildsForProject).toHaveBeenCalledWith({ projectName: 'albern' });
+
+      expect(response).toEqual({
+        statusCode: 301,
+        headers: {
+          Location: 'https://test_region.console.aws.amazon.com/codesuite/codebuild/123/projects/albern/build/1',
+        },
+      });
+    });
+
+    test('only url with projectName in environment', async () => {
+      AWS.listBuildsForProjectResponse.mockReturnValueOnce({ ids: ['1', '2'] });
+      process.env.DEFAULT_PROJECT_NAME = 'albern';
+      mockedApiEvent.queryStringParameters = { url: 'true' };
       process.env.AWS_REGION = 'test_region';
       process.env.ACCOUNT = '123';
       const response = await handler(mockedApiEvent);

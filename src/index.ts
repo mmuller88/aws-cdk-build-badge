@@ -14,6 +14,13 @@ export interface BuildBadgeProps {
    * @default - not set and account id will be shown as 123
    */
   readonly hideAccountID?: string;
+
+  /**
+   * Specify a default project name. Than you don't need to add it in the url. If you do so anyway the default here will be ignored.
+   *
+   * @default - not set
+   */
+  readonly defaultProjectName?: string;
 }
 
 export class BuildBadge extends core.Construct {
@@ -37,6 +44,7 @@ export class BuildBadge extends core.Construct {
       },
       environment: {
         ACCOUNT: props?.hideAccountID ? (props.hideAccountID === 'no' ? parent.account : props.hideAccountID) : '123',
+        DEFAULT_PROJECT_NAME: props?.defaultProjectName || '',
       },
       timeout: core.Duration.minutes(15),
     });
