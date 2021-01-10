@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.3...v0.0.4) (2021-01-10)
+
+
+### Bug Fixes
+
+* badge copy command ([aecec51](https://github.com/mmuller88/aws-cdk-build-badge/commit/aecec51f47c034632ee1914e15a41ad7a5d458fc))
+
 ### [0.0.3](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.2...v0.0.3) (2021-01-10)
 
 
