@@ -34,6 +34,7 @@ new BuildBadge(parent: Stack, id: string, props?: BuildBadgeProps)
 * **parent** (<code>[Stack](#aws-cdk-core-stack)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[BuildBadgeProps](#aws-cdk-build-badge-buildbadgeprops)</code>)  *No description*
+  * **defaultProjectName** (<code>string</code>)  Specify a default project name. __*Default*__: not set
   * **hideAccountID** (<code>string</code>)  Thats a little safety feature. __*Default*__: not set and account id will be shown as 123
 
 
@@ -56,6 +57,7 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
+**defaultProjectName**? | <code>string</code> | Specify a default project name.<br/>__*Default*__: not set
 **hideAccountID**? | <code>string</code> | Thats a little safety feature.<br/>__*Default*__: not set and account id will be shown as 123
 
 
