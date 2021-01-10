@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.4...v0.0.5) (2021-01-10)
+
+
+### Features
+
+* adjust textLength from succeeded badge ([698a5d9](https://github.com/mmuller88/aws-cdk-build-badge/commit/698a5d9cf793d55459660207e87ee3c9c62fc977))
+* adjust textLength from succeeded badge ([19f964c](https://github.com/mmuller88/aws-cdk-build-badge/commit/19f964c71fc3fceb9b4518386640418b374f8500))
+* adjust textLength from succeeded badge ([bbcaa6b](https://github.com/mmuller88/aws-cdk-build-badge/commit/bbcaa6bb56587dcc09817cc8dd98234a811dba33))
+
 ### [0.0.4](https://github.com/mmuller88/aws-cdk-build-badge/compare/v0.0.3...v0.0.4) (2021-01-10)
 
 
