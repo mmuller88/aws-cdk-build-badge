@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
-const cdkVersion = '1.83.0';
+const cdkVersion = '1.88.0';
 
 const deps = [
   '@types/aws-lambda',
@@ -21,10 +21,9 @@ const cdkDeps = [
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'damadden88@googlemail.de',
   authorName: 'martin.mueller',
-  // cdkVersion: '1.83.0',
-  // cdkVersionPinning: true,
   name: 'aws-cdk-build-badge',
   repositoryUrl: 'https://github.com/mmuller88/aws-cdk-build-badge',
+  defaultReleaseBranch: 'master',
   codeCov: true,
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   devDeps: [...deps, ...cdkDeps],
