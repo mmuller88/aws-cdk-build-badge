@@ -55,9 +55,8 @@
     "jsii-diff": "^1.16.0",
     "jsii-docgen": "^1.8.16",
     "jsii-pacmak": "^1.16.0",
-    "jsii-release": "^0.2.10",
     "json-schema": "^0.3.0",
-    "projen": "^0.13.13",
+    "projen": "^0.15.17",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.4.4",
     "typescript": "^3.9.5"
