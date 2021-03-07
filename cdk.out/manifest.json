@@ -1,0 +1,664 @@
+{
+  "version": "7.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "my-build-badge-demo-stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "my-build-badge-demo-stack.assets.json",
+        "requiresBootstrapStackVersion": 4
+      }
+    },
+    "my-build-badge-demo-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "my-build-badge-demo-stack.template.json",
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/8b886aa8ccc0edec258d9fbfd13c0a3528425741cf16add72ebc80c6a61dbfd7",
+        "requiresBootstrapStackVersion": 4,
+        "additionalDependencies": [
+          "my-build-badge-demo-stack.assets"
+        ]
+      },
+      "dependencies": [
+        "my-build-badge-demo-stack.assets"
+      ],
+      "metadata": {
+        "/my-build-badge-demo-stack/BuildBadge/badge/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgebadgeServiceRoleE417F11F",
+            "trace": [
+              "new Role (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:552:31)",
+              "new NodejsFunction (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:110:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:31:25)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/badge/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgebadgeServiceRoleDefaultPolicy4004EC3E",
+            "trace": [
+              "new Policy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Role.addToPolicy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-iam/lib/role.ts:376:17)",
+              "NodejsFunction.addToRolePolicy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:263:15)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:52:17)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/badge/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgebadgeA0B40829",
+            "trace": [
+              "new Function (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:608:35)",
+              "new NodejsFunction (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:110:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:31:25)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApi67D65870",
+            "trace": [
+              "new RestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:694:22)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiCloudWatchRole5C0B77BD",
+            "trace": [
+              "new Role (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "LambdaRestApi.configureCloudWatchRole (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:494:18)",
+              "new RestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:711:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiAccount2D0F8B5D",
+            "trace": [
+              "LambdaRestApi.configureCloudWatchRole (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:499:22)",
+              "new RestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:711:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiDeployment08CF77EEfd4e30eea1638e80fe7e6c5b287361f8",
+            "trace": [
+              "new Deployment (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:71:21)",
+              "LambdaRestApi.configureDeployment (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:510:32)",
+              "new RestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiDeploymentStageprodFEFA21FC",
+            "trace": [
+              "new Stage (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:240:22)",
+              "LambdaRestApi.configureDeployment (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:520:30)",
+              "new RestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiEndpoint63A20E45",
+            "trace": [
+              "LambdaRestApi.configureDeployment (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:525:7)",
+              "new RestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiproxyAA6A28B8",
+            "trace": [
+              "new Resource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:402:22)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:474:5)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/{proxy+}/ANY/ApiPermission.mybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4E.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiproxyANYApiPermissionmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYproxyFEBE5AAA",
+            "trace": [
+              "NodejsFunction.addPermission (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:63:18)",
+              "new Method (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:496:18)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:483:29)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/{proxy+}/ANY/ApiPermission.Test.mybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4E.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiproxyANYApiPermissionTestmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYproxy9DEC5D93",
+            "trace": [
+              "NodejsFunction.addPermission (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:71:20)",
+              "new Method (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:496:18)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:483:29)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiproxyANY2FB04D37",
+            "trace": [
+              "new Method (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:215:22)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:496:18)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:483:29)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/ANY/ApiPermission.mybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4E.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiANYApiPermissionmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYE1C81673",
+            "trace": [
+              "NodejsFunction.addPermission (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:63:18)",
+              "new Method (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "RootResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:493:29)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:483:29)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/ANY/ApiPermission.Test.mybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4E.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiANYApiPermissionTestmybuildbadgedemostackBuildBadgeLambdaRestApi1E56DD4EANYEF134B78",
+            "trace": [
+              "NodejsFunction.addPermission (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:71:20)",
+              "new Method (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "RootResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:493:29)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:483:29)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/LambdaRestApi/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeLambdaRestApiANYB4ECA9EA",
+            "trace": [
+              "new Method (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:215:22)",
+              "RootResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:493:29)",
+              "new ProxyResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:483:29)",
+              "RootResource.addProxy (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:57:27)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/BadgeBuildUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeBadgeBuildUrlDECA8A32",
+            "trace": [
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:64:5)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BuildBadge/BadgeUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildBadgeBadgeUrlB81442AA",
+            "trace": [
+              "new BuildBadge (/home/martin/git/aws-cdk-build-badge/src/index.ts:68:5)",
+              "new IntegTesting (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:11:5)",
+              "Object.<anonymous> (/home/martin/git/aws-cdk-build-badge/test/integ.default.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:542:17)",
+              "DefaultStackSynthesizer.synthesize (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:372:7)",
+              "/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:29",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "synthesizeTree (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:150:3)",
+              "Object.synthesize (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/my-build-badge-demo-stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:552:3)",
+              "DefaultStackSynthesizer.synthesize (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:372:7)",
+              "/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:29",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "synthesizeTree (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:150:3)",
+              "Object.synthesize (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/home/martin/git/aws-cdk-build-badge/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/home/martin/.npm/_npx/503415/lib/node_modules/ts-node/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
