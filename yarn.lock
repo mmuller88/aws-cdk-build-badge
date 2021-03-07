@@ -898,10 +898,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jsii/spec@^1.16.0", "@jsii/spec@^1.20.1":
-  version "1.20.1"
-  resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.20.1.tgz#931a4e8280ab2f2314452a92fb91f0b40d5e8f77"
-  integrity sha512-+ot9SPb/lFnRiPlhWUGLMp8owpr/pnpFX0/iIUhZ0kJ1LIAUde7TSuaz70mV6x+ES2wvVXKsgfu2WTMFHIAwZQ==
+"@jsii/spec@^1.16.0", "@jsii/spec@^1.20.1", "@jsii/spec@^1.24.0":
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.24.0.tgz#59dd43af7bb65074b39bd457a98f4ab3cb385bd3"
+  integrity sha512-Km0va0ZBlzWPOijsNlo7SwozYT6Ej9h01xXYtBmoHw2CLccofOEQLV2Ig3+ydhU+aTW5yLKJrVPsAjJoaaBAgA==
   dependencies:
     jsonschema "^1.4.0"
 
@@ -4214,11 +4214,11 @@ jsii-rosetta@^1.20.1:
     yargs "^16.2.0"
 
 jsii@^1.20.1:
-  version "1.20.1"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.20.1.tgz#e41b32a3968e781aec1348099e441c3fa5509639"
-  integrity sha512-e4LS9u4QhhsqDN/JlK7JHDhYXhg3fiw+nq1xU5EeAtHQJvmM7CXTXhgDT9FjtnkWbnnjCOd0hgLcE8yIIZ8Lkw==
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.24.0.tgz#48e156b77f54d067520e0789f75d70c883be058a"
+  integrity sha512-ROCFFFdbs2o8OgQEWvpMY/UMXshndkGr8TunG0NQx8kQfONYeCjgNFqMcbcyXuhlR+DI1MUGVVOzw6zc9geyGA==
   dependencies:
-    "@jsii/spec" "^1.20.1"
+    "@jsii/spec" "^1.24.0"
     case "^1.6.3"
     colors "^1.4.0"
     deep-equal "^2.0.5"
@@ -4228,7 +4228,7 @@ jsii@^1.20.1:
     semver-intersect "^1.4.0"
     sort-json "^2.0.0"
     spdx-license-list "^6.4.0"
-    typescript "~3.9.7"
+    typescript "~3.9.9"
     yargs "^16.2.0"
 
 json-parse-better-errors@^1.0.1:
@@ -6321,10 +6321,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.9.5, typescript@~3.9.7:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+typescript@^3.9.5, typescript@~3.9.7, typescript@~3.9.9:
+  version "3.9.9"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.9.tgz#e69905c54bc0681d0518bd4d587cc6f2d0b1a674"
+  integrity sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==
 
 uglify-js@^3.1.4:
   version "3.12.6"
