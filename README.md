@@ -15,6 +15,23 @@ How the native badges are working you find in the AWS docs:
 
 After you created the build badge construct you can use the api gateway url to get the badge picture. Additionally you can retrieve the url to to the CodeBuild build with adding ?url=true to the query parameter. See the example.
 
+# URL to Build
+
+If you want your badge forwarding you to your build when you click on it use the url=true parameter:
+
+```
+Build succeeded: [![CodeBuild test build](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
+```
+
+# Default project name
+
+You can use the **defaultProjectName** in the cdk construct to point the badge to a specific project. That way you don't need to write the projectName parameter in thr url.
+
+```
+new BuildBadge(stack, 'BuildBadge2', { defaultProjectName: 'Build123' });
+
+```
+
 # Example
 
 Build succeeded: [![CodeBuild test build](https://raw.githubusercontent.com/mmuller88/aws-cdk-build-badge/master/badges/succeeded.svg)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
