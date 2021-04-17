@@ -17,11 +17,15 @@ After you created the build badge construct you can use the api gateway url to g
 
 # Example
 
-Build succeeded: [![CodeBuild test build](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
+Build succeeded: [![CodeBuild test build](https://raw.githubusercontent.com/mmuller88/aws-cdk-build-badge/master/badges/succeeded.svg)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
 
-Build failed: [![CodeBuild test build](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStagedevTestC-UnzKxyLsGYZw)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
+Build failed: [![CodeBuild test build](https://raw.githubusercontent.com/mmuller88/aws-cdk-build-badge/master/badges/failed.svg)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
 
-Build not found: [![CodeBuild test build](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=123)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=123&url=true)
+Build not found: [![CodeBuild test build](https://raw.githubusercontent.com/mmuller88/aws-cdk-build-badge/master/badges/not_found.svg)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=123&url=true)
+
+Build in progress: [![CodeBuild test build](https://raw.githubusercontent.com/mmuller88/aws-cdk-build-badge/master/badges/in_progress.svg)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
+
+Build stopped: [![CodeBuild test build](https://raw.githubusercontent.com/mmuller88/aws-cdk-build-badge/master/badges/stopped.svg)](https://fktijpwdng.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineCustomStageprodTest-Fdei5bm2ulR6&url=true)
 
 There are more badges (see ./badges/) but I don't have build in that state atm.
 
