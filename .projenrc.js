@@ -30,12 +30,7 @@ const project = new AwsCdkConstructLibrary({
   deps: deps,
   peerDeps: cdkDeps,
   bundledDeps: deps,
-  keywords: [
-    'cdk',
-    'aws',
-    'codebuild',
-    'badge',
-  ],
+  keywords: ['cdk', 'aws', 'codebuild', 'badge'],
   python: {
     distName: 'aws-cdk-build-badge',
     module: 'aws_cdk_build_badge',
@@ -44,6 +39,7 @@ const project = new AwsCdkConstructLibrary({
     dotNetNamespace: 'com.github.mmuller88',
     packageId: 'com.github.mmuller88.awsCdkBuildBadge',
   },
+  keywords: ['cdk', 'aws', 'badge'],
 });
 
 project.setScript('deploy', 'cdk deploy');
