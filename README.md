@@ -3,6 +3,8 @@
 [![.NET version](https://img.shields.io/nuget/v/com.github.mmuller88.awsCdkBuildBadge.svg?style=flat-square)](https://www.nuget.org/packages/com.github.mmuller88.awsCdkBuildBadge/)
 ![Release](https://github.com/mmuller88/aws-cdk-build-badge/workflows/Release/badge.svg)
 
+[tested cdk versions](https://github.com/mmuller88/aws-cdk-build-badge/pulls?q=is%3Apr+is%3Aopen+label%3Acdk-version-test)
+
 # aws-cdk-build-badge
 
 This an AWS CDK custom construct for get the status of a CodeBuild Project with has CodePipeline as source. That is currently not possible:
