@@ -26,6 +26,7 @@ jobs:
         continue-on-error: true
         run: |-
           yarn add projen
+          yarn install --check-files --frozen-lockfile
           CDK_VERSION=$CDK_VERSION npx projen
       - name: Push branch
         run: |- 
