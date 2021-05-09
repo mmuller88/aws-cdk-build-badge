@@ -10,12 +10,12 @@ const deps = [
   `@aws-cdk/assert@${cdkVersion}`,
 ];
 
-const cdkDeps = [
-  `@aws-cdk/aws-apigateway@${cdkVersion}`,
-  `@aws-cdk/aws-lambda@${cdkVersion}`,
-  `@aws-cdk/core@${cdkVersion}`,
-  `@aws-cdk/aws-iam@${cdkVersion}`,
-  `@aws-cdk/aws-lambda-nodejs@${cdkVersion}`,
+const cdkDependencies = [
+  '@aws-cdk/aws-apigateway',
+  '@aws-cdk/aws-lambda',
+  '@aws-cdk/core',
+  '@aws-cdk/aws-iam',
+  '@aws-cdk/aws-lambda-nodejs',
 ];
 
 const project = new AwsCdkConstructLibrary({
@@ -26,10 +26,12 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'master',
   codeCov: true,
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
-  devDeps: [...deps, ...cdkDeps],
-  deps: deps,
-  peerDeps: cdkDeps,
-  bundledDeps: deps,
+  cdkVersion,
+  cdkVersionPinning: true,
+  cdkDependencies,
+  cdkDependenciesAsDeps: cdkDependencies,
+  deps,
+  peerDeps: deps,
   keywords: ['cdk', 'aws', 'codebuild', 'badge'],
   python: {
     distName: 'aws-cdk-build-badge',
