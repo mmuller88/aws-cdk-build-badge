@@ -41,7 +41,7 @@ jobs:
         with:
           source_branch: bump/${{ env.CDK_VERSION }}
           pr_title: Testing CDK version to ${{ env.CDK_VERSION }}
-          pr_label: "cdk-version-pr"  
+          pr_label: "cdk-version-test"  
           destination_branch: "master"
           github_token: ${{ secrets.PUSHABLE_GITHUB_TOKEN }}
     container:
