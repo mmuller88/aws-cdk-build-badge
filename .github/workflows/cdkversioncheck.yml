@@ -37,7 +37,7 @@ jobs:
       - name: Push branch
         run: |- 
           git checkout -b bump/${{ env.CDK_VERSION }}
-          git diff --exit-code || ((git add package.json yarn.lock .projen/deps.json) && (git commit -m "Testing CDK version to ${{ env.CDK_VERSION }}" && git push -u origin bump/${{ env.CDK_VERSION }}))
+          git diff --exit-code || ((git add package.json yarn.lock .projen/deps.json .projenrc.js) && (git commit -m "Testing CDK version to ${{ env.CDK_VERSION }}" && git push -u origin bump/${{ env.CDK_VERSION }}))
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
