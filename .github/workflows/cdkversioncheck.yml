@@ -28,15 +28,15 @@ jobs:
           yarn install --check-files --frozen-lockfile
           echo "${{ env.CDK_VERSION }}"
           CDK_VERSION=${{ env.CDK_VERSION }} npx projen
+      - name: Set git identity
+        run: |-
+          git config user.name "Auto-bump"
+          git config user.email "github-actions@github.com"
       - name: Push branch
         run: |- 
           git checkout -b bump/${{ env.CDK_VERSION }}
           git commit -m "Testing CDK version to ${{ env.CDK_VERSION }}"
           git push -u origin bump/${{ env.CDK_VERSION }}
-      - name: Set git identity
-        run: |-
-          git config user.name "Auto-bump"
-          git config user.email "github-actions@github.com"
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
