@@ -26,11 +26,12 @@ jobs:
         run: |-
           yarn add projen
           yarn install --check-files --frozen-lockfile
-          CDK_VERSION=$CDK_VERSION npx projen
+          echo "${{ env.CDK_VERSION }}"
+          CDK_VERSION=${{ env.CDK_VERSION }} npx projen
       - name: Push branch
         run: |- 
-          git checkout -b bump/$CDK_VERSION
-          git push -u origin bump/$CDK_VERSION
+          git checkout -b bump/${{ env.CDK_VERSION }}
+          git push -u origin bump/${{ env.CDK_VERSION }}
       - name: Set git identity
         run: |-
           git config user.name "Auto-bump"
