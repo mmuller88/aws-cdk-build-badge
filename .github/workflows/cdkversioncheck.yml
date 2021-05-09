@@ -1,8 +1,10 @@
 name: cdkversioncheck
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron:  '0 17,22 * * *'
+  # push:
+  #   branches:
+  #     - master
 
 jobs:
   check:
