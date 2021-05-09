@@ -35,8 +35,8 @@ jobs:
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: bump/$CDK_VERSION
-          pr_title: Testing CDK version to $CDK_VERSION
+          source_branch: bump/${{ env.CDK_VERSION }}
+          pr_title: Testing CDK version to ${{ env.CDK_VERSION }}
           destination_branch: "master"
           github_token: ${{ secrets.PUSHABLE_GITHUB_TOKEN }}
     container:
