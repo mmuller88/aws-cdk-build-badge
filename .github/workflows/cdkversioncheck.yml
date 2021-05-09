@@ -24,8 +24,8 @@ jobs:
       - name: Synthesize project files
         continue-on-error: true
         run: |-
-          yarn add projen
-          yarn install --check-files --frozen-lockfile
+          # yarn add projen
+          # yarn install --check-files --frozen-lockfile
           echo "${{ env.CDK_VERSION }}"
           CDK_VERSION=${{ env.CDK_VERSION }} npx projen
       - name: Set git identity
