@@ -3,13 +3,12 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch: {}
+
 jobs:
   check:
     runs-on: ubuntu-latest
     env:
-      CI: "true"
-      RELEASE: "true"
+      CI: "false"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
