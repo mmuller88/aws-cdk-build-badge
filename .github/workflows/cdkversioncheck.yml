@@ -27,7 +27,9 @@ jobs:
           yarn add projen
           # yarn install --check-files --frozen-lockfile
           echo "${{ env.CDK_VERSION }}"
-          CDK_VERSION=${{ env.CDK_VERSION }} npx projen
+          sed -i "s/process.env.CDK_VERSION/'${{ env.CDK_VERSION }}'/g" .projenrc.js
+          # CDK_VERSION=${{ env.CDK_VERSION }} npx projen
+          npx projen
       - name: Set git identity
         run: |-
           git config user.name "Auto-bump"
