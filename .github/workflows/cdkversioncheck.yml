@@ -14,8 +14,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      # - name: Install dependencies
-      #   run: yarn install --check-files --frozen-lockfile
       - name: Fetch CDK versions
         run: |-
           echo "CDK_VERSION=$(curl --silent "https://api.github.com/repos/aws/aws-cdk/releases/latest" |
@@ -25,10 +23,8 @@ jobs:
         continue-on-error: true
         run: |-
           yarn add projen
-          # yarn install --check-files --frozen-lockfile
           echo "${{ env.CDK_VERSION }}"
-          sed -i "s/process.env.CDK_VERSION/'${{ env.CDK_VERSION }}'/g" .projenrc.js
-          # CDK_VERSION=${{ env.CDK_VERSION }} npx projen
+          sed -i "3s/.*/const cdkVersion = '${{ env.CDK_VERSION }}';/" .projenrc.js
           npx projen
       - name: Set git identity
         run: |-
