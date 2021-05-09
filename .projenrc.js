@@ -31,7 +31,8 @@ const project = new AwsCdkConstructLibrary({
   cdkDependencies,
   cdkDependenciesAsDeps: cdkDependencies,
   deps,
-  peerDeps: deps,
+  // peerDeps: deps,
+  bundledDeps: deps,
   keywords: ['cdk', 'aws', 'codebuild', 'badge'],
   python: {
     distName: 'aws-cdk-build-badge',

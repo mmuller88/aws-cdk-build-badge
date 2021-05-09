@@ -54,17 +54,12 @@
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "@aws-cdk/assert": "1.97.0",
     "@aws-cdk/aws-apigateway": "1.97.0",
     "@aws-cdk/aws-iam": "1.97.0",
     "@aws-cdk/aws-lambda": "1.97.0",
     "@aws-cdk/aws-lambda-nodejs": "1.97.0",
     "@aws-cdk/core": "1.97.0",
-    "@types/aws-lambda": "^8.10.76",
-    "aws-lambda": "^1.0.6",
-    "aws-sdk": "^2.903.0",
-    "constructs": "^3.2.27",
-    "esbuild": "^0"
+    "constructs": "^3.2.27"
   },
   "dependencies": {
     "@aws-cdk/assert": "1.97.0",
@@ -78,7 +73,13 @@
     "aws-sdk": "^2.903.0",
     "esbuild": "^0"
   },
-  "bundledDependencies": [],
+  "bundledDependencies": [
+    "@aws-cdk/assert",
+    "@types/aws-lambda",
+    "aws-lambda",
+    "aws-sdk",
+    "esbuild"
+  ],
   "keywords": [
     "aws",
     "badge",
