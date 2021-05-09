@@ -2,7 +2,7 @@ name: cdkbump
 on:
   push:
     branches:
-      bump/**
+      bumppp/**
 
 jobs:
   build:
