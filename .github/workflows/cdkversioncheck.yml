@@ -21,6 +21,7 @@ jobs:
           grep '"tag_name":' |
           sed -E 's/.*"v([^"]+)".*/\1/')" >> $GITHUB_ENV
       - name: Synthesize project files
+        continue-on-error: true
         run: |-
           yarn add projen
           CDK_VERSION=$CDK_VERSION npx projen
