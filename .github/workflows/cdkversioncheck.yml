@@ -1,7 +1,7 @@
 name: cdkversioncheck
 on:
   schedule:
-    - cron:  '0 17,22 * * *'
+    - cron:  '0 4 * * *'
   # push:
   #   branches:
   #     - master
