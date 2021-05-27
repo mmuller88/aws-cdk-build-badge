@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "build"
     },
     {
@@ -68,8 +68,18 @@
       "type": "build"
     },
     {
+      "name": "npm-check-updates",
+      "version": "^11",
+      "type": "build"
+    },
+    {
+      "name": "npm-check-updates",
+      "version": "^11",
+      "type": "build"
+    },
+    {
       "name": "projen",
-      "version": "^0.17.83",
+      "version": "^0.18.11",
       "type": "build"
     },
     {
@@ -87,7 +97,7 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "bundled"
     },
     {
@@ -109,27 +119,27 @@
     },
     {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "peer"
     },
     {
@@ -139,32 +149,32 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.97.0",
+      "version": "1.106.1",
       "type": "runtime"
     },
     {
