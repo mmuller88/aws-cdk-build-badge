@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
-const cdkVersion = '1.106.1';
+const cdkVersion = '1.108.0';
 
 const deps = [
   '@types/aws-lambda',
